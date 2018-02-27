@@ -6,18 +6,18 @@ var express          = require("express"),
     passport         = require("passport"),
     LocalStrategy    = require("passport-local"),
     methodOverride   = require("method-override"),
-    Campground       = require("./models/campground"),
-    Comment          = require("./models/comment"),
-    User             = require("./models/user"),
-    seedDB           = require("./seeds");
+ //   Campground       = require("./models/campground"),
+//    Comment          = require("./models/comment"),
+    User             = require("./models/user");
+ //   seedDB           = require("./seeds");
     
     
 var commentRoutes    = require("./routes/comments"),
     indexRoutes      = require("./routes/index"),
     campgroundRoutes = require("./routes/campgrounds");
     
-mongoose.connect(process.env.DATABASEURL);
-//mongoose.connect("mongodb://top:4185@ds163060.mlab.com:63060/yelpcamp");
+//mongoose.connect(process.env.DATABASEURL);
+mongoose.connect("mongodb://top:4185@ds163060.mlab.com:63060/yelpcamp");
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + "/public"));
 app.use(methodOverride("_method"));

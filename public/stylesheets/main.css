@@ -1,9 +1,12 @@
 .thumbnail img {
-    width: 100%
+    width: 100%;
+    display: table-cell;
 }
 
 .thumbnail {
     padding: 0;
+    margin: auto;
+    display:table;
 }
 
 .thumbnail .caption-full {
